@@ -223,20 +223,13 @@ const rejectedTransactions = transactions.filter((transaction) => transaction.st
 //Problem 1.Account SearchfindAccount() দিয়ে ACC-003 খুঁজে তার owner-এর নাম print করো।
 // Solution: 
 
-//An array holding account data along with the owner's name
-const systemAccounts = [
-    { id: "ACC-001", owner: "Masum Ahmed", balance: 5000 },
-    { id: "ACC-002", owner: "Mazharul islam", balance: 1200 },
-    { id: "ACC-003", owner: "Mahirul Arham", balance: 3500 }
-];
-
 // নির্দিষ্ট অ্যাকাউন্ট খুঁজে বের করার ফাংশন
 function findAccount(accounts, accountId) {
     return accounts.find(acc => acc.id === accountId);
 }
 
 // ACC-003 অ্যাকাউন্টটি খোঁজা হচ্ছে
-const targetAccount = findAccount(systemAccounts, "ACC-003");
+const targetAccount = findAccount(accounts, "ACC-003");
 
 // ফলাফল প্রিন্ট করা
 if (targetAccount) {
@@ -246,15 +239,21 @@ if (targetAccount) {
 }
 
 //02. Calculate the total balance of all accounts using reduce().
-const totalBalance = accounts.reduce( (total, account) =>{
+const totalBalance = accounts.reduce((total, account) => {
   return total + account.balance;
-}, 
+}, 0);
 
-0 
-);
 console.log("Total balance:", totalBalance);
+
 
 // 03 Filter out and create a new array containing only the APPROVED transactions.
 const approvedTransactions = transactions.filter((transaction) => transaction.status === "APPROVED");
  console.log("Approved Transactions:", approvedTransactions);
  console.log("Total Approved Transactions:", approvedTransactions.length);
+
+
+
+
+ //Day 2 — Final Challenge: Transfer Between Accounts
+
+ 
