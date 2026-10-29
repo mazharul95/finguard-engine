@@ -15,4 +15,4 @@ console.log("\n--- 3. Updated Accounts State ---");
 console.log("Accounts:", accounts);
 
 console.log("\n--- 4. Ledger History ---");
-console.log("Ledger:", JSON.stringify(ledger, null, 2));
+console.log("Ledger:", JSON.stringify(ledger, null, 2)); 
